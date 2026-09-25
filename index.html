@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creative Event And Decoration | Alandi Devachi, Pune</title>
+<meta name="description" content="Creative Event And Decoration — birthday, wedding, engagement & corporate décor in Alandi Devachi, Pune. Call or WhatsApp for a quote today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3E6;
+    --bg2:#F5E9D6;
+    --ink:#2B2118;
+    --accent:#E0711E;
+    --accent-deep:#B8501A;
+    --secondary:#8C2F39;
+    --border:#D9C6A0;
+    --soft:#F6DBA9;
+    --radius:14px;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    box-sizing:border-box;
+  }
+  html{scroll-padding-top:80px;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Mukta',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand-name{font-family:'Yatra One',cursive;font-weight:400;letter-spacing:.3px;}
+  h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.15;margin:0 0 18px;}
+  h2{font-size:clamp(1.6rem,4vw,2.3rem);margin:0 0 8px;}
+  h3{font-size:1.25rem;margin:0 0 6px;}
+  p{margin:0 0 14px;max-width:62ch;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{max-width:100%;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px;}
+  section{padding:64px 0;}
+  @media(min-width:760px){section{padding:96px 0;}}
+
+  /* motif sprite */
+  .motif{width:34px;height:34px;fill:var(--accent);flex:none;}
+  .motif.secondary{fill:var(--secondary);}
+  .motif.big{width:64px;height:64px;}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,243,230,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+    padding-top:env(safe-area-inset-top,0px);
+  }
+  .headbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1140px;margin:0 auto;gap:14px;}
+  .brand{display:flex;align-items:center;gap:8px;}
+  .brand-name{font-size:1.28rem;color:var(--accent-deep);}
+  nav.desknav{display:none;gap:26px;font-weight:600;font-size:.98rem;}
+  nav.desknav a:hover{color:var(--accent-deep);}
+  .head-actions{display:flex;align-items:center;gap:10px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border-radius:999px;font-weight:700;font-size:.94rem;
+    border:2px solid transparent;white-space:nowrap;
+  }
+  .btn-call{background:var(--ink);color:var(--bg);}
+  .btn-call.outline{background:transparent;color:var(--ink);border-color:var(--ink);}
+  .btn-wa{background:#3FA24A;color:#fff;}
+  .btn-wa svg{width:17px;height:17px;fill:#fff;flex:none;}
+  .hamburger{display:flex;flex-direction:column;gap:4px;background:none;border:none;padding:8px;cursor:pointer;}
+  .hamburger span{width:22px;height:2.5px;background:var(--ink);border-radius:2px;}
+  #mobmenu{display:none;flex-direction:column;gap:2px;background:var(--bg);border-bottom:1px solid var(--border);}
+  #mobmenu.open{display:flex;}
+  #mobmenu a{padding:14px 20px;font-weight:600;border-top:1px solid var(--border);}
+  @media(min-width:900px){
+    nav.desknav{display:flex;}
+    .hamburger{display:none;}
+    .head-actions .call-text{display:inline;}
+  }
+
+  /* hero */
+  .hero{padding-top:52px;position:relative;overflow:hidden;}
+  .hero-grid{display:grid;gap:40px;align-items:center;}
+  @media(min-width:880px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:20px;}}
+  .eyebrow{color:var(--secondary);font-weight:700;font-size:.95rem;margin-bottom:6px;}
+  .hero p.lede{font-size:1.12rem;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0 16px;}
+  .hero-ctas .btn{padding:14px 24px;font-size:1rem;}
+  .trustline{font-size:.92rem;color:#5b4c3d;display:flex;align-items:center;gap:8px;}
+  .hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:260px;}
+  .garland{width:100%;max-width:340px;}
+
+  /* trust strip */
+  .strip{background:var(--ink);color:var(--bg);}
+  .strip .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;text-align:center;}
+  @media(min-width:700px){.strip .wrap{grid-template-columns:repeat(4,1fr);}}
+  .strip b{display:block;font-family:'Yatra One',cursive;font-size:1.8rem;color:var(--soft);}
+  .strip span{font-size:.85rem;opacity:.85;}
+
+  /* divider */
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 0 0;}
+  .divider .line{height:1px;background:var(--border);flex:1;max-width:120px;}
+
+  /* services */
+  .services-head{text-align:center;max-width:640px;margin:0 auto 40px;}
+  .bento{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:700px){.bento{grid-template-columns:repeat(4,1fr);}
+    .bento .card.wide{grid-column:span 2;}
+  }
+  .card{
+    background:#fff8ec;border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:10px;
+  }
+  .card .tag{font-size:.78rem;font-weight:700;color:var(--secondary);text-transform:none;}
+  .card ul{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:.95rem;}
+  .card li{display:flex;gap:8px;align-items:baseline;}
+  .card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;margin-top:6px;}
+  .card .ask{margin-top:auto;padding-top:8px;font-weight:700;color:var(--accent-deep);font-size:.92rem;display:inline-flex;align-items:center;gap:6px;}
+
+  /* about / why us */
+  .about{background:var(--soft);}
+  .about-grid{display:grid;gap:30px;}
+  @media(min-width:820px){.about-grid{grid-template-columns:1fr 1fr;align-items:start;}}
+  .why-list{display:flex;flex-direction:column;gap:14px;margin-top:10px;}
+  .why-item{display:flex;gap:12px;align-items:flex-start;}
+  .why-item .motif{width:26px;height:26px;margin-top:2px;}
+
+  /* gallery-ish strip of effect chips */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .chip{border:1px solid var(--border);background:#fff8ec;border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:600;}
+
+  /* contact */
+  .contact-grid{display:grid;gap:28px;}
+  @media(min-width:880px){.contact-grid{grid-template-columns:1fr 1fr;}}
+  .info-card{background:#fff8ec;border:1px solid var(--border);border-radius:var(--radius);padding:26px;}
+  .info-row{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--border);}
+  .info-row:first-child{border-top:none;}
+  .info-row .motif{width:22px;height:22px;margin-top:2px;}
+  .map-wrap{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:260px;}
+  .map-wrap iframe{width:100%;height:100%;min-height:260px;border:0;display:block;}
+  .contact-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+
+  /* footer */
+  footer{background:var(--ink);color:var(--bg);padding:36px 0 calc(90px + env(safe-area-inset-bottom,0px));}
+  @media(min-width:900px){footer{padding:36px 0;}}
+  footer .wrap{display:flex;flex-direction:column;gap:8px;font-size:.9rem;opacity:.9;}
+  footer a{text-decoration:underline;}
+
+  /* sticky bottom bar */
+  #stickybar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));
+    background:var(--bg);border-top:1px solid var(--border);
+    box-shadow:0 -6px 18px rgba(0,0,0,.08);
+  }
+  #stickybar a{flex:1;justify-content:center;padding:13px 10px;font-size:.98rem;}
+  @media(min-width:769px){#stickybar{display:none;}}
+  @media(max-width:768px){body{padding-bottom:74px;}}
+
+  @media(prefers-reduced-motion:no-preference){
+    .hero-art .garland{animation:sway 6s ease-in-out infinite;}
+    @keyframes sway{0%,100%{transform:rotate(-1.2deg);}50%{transform:rotate(1.2deg);}}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="marigold" viewBox="0 0 64 64">
+      <g>
+        <circle cx="32" cy="32" r="6" fill="var(--secondary,#8C2F39)"/>
+        <g>
+          <ellipse cx="32" cy="14" rx="7" ry="12"/>
+          <ellipse cx="32" cy="14" rx="7" ry="12" transform="rotate(60 32 32)"/>
+          <ellipse cx="32" cy="14" rx="7" ry="12" transform="rotate(120 32 32)"/>
+          <ellipse cx="32" cy="14" rx="7" ry="12" transform="rotate(180 32 32)"/>
+          <ellipse cx="32" cy="14" rx="7" ry="12" transform="rotate(240 32 32)"/>
+          <ellipse cx="32" cy="14" rx="7" ry="12" transform="rotate(300 32 32)"/>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="paisley" viewBox="0 0 64 64">
+      <path d="M32 6c14 0 22 10 22 22 0 10-7 16-15 16-6 0-9-4-9-9 0-4 3-6 6-6 2 0 4 1 4 4 0-8-6-13-13-13-9 0-16 7-16 17 0 11 9 19 20 19 13 0 23-10 23-23C54 15 44 6 32 6z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="headbar">
+    <a class="brand" href="#top" aria-label="Creative Event And Decoration">
+      <svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg>
+      <span class="brand-name">Creative Event &amp; Decoration</span>
+    </a>
+    <nav class="desknav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#gallery">Highlights</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-call outline" href="tel:+919767162445"><span class="call-text">Call</span></a>
+      <a class="btn btn-wa" href="https://wa.me/919767162445?text=Hi%21%20I%27d%20like%20to%20enquire%20about%20event%20decoration%20for%20my%20event.">
+        <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3 9 3 16c0 2.6.8 5 2.1 7L3 29l6.2-2c2 1.1 4.3 1.7 6.8 1.7 7 0 13-6 13-13S23 3 16 3zm7.5 18.4c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.5.2-2.4-.1-.6-.2-1.3-.4-2.2-.8-3.9-1.7-6.4-5.6-6.6-5.9-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.4-.4.8-.5 1.1-.5h.8c.3 0 .6 0 .9.7.3.8 1 2.6 1.1 2.8.1.2.2.5 0 .8-.6 1.2-1.3 1.2-1 1.8.9 2 2.3 3.5 4.1 4.4.3.2.5.1.7-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.2 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.9z"/></svg>
+        WhatsApp
+      </a>
+      <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobmenu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobmenu">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#gallery">Highlights</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Alandi Devachi, Pune · Est. 2024</p>
+        <h1>Creating beautiful moments, one celebration at a time</h1>
+        <p class="lede">Balloon, flower and light décor for birthdays, weddings and every occasion — planned and set up by a local team you can meet in person.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="https://wa.me/919767162445?text=Hi%21%20I%27m%20planning%20an%20event%20and%20want%20to%20know%20your%20decoration%20packages.">
+            <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3 9 3 16c0 2.6.8 5 2.1 7L3 29l6.2-2c2 1.1 4.3 1.7 6.8 1.7 7 0 13-6 13-13S23 3 16 3zm7.5 18.4c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.5.2-2.4-.1-.6-.2-1.3-.4-2.2-.8-3.9-1.7-6.4-5.6-6.6-5.9-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.4-.4.8-.5 1.1-.5h.8c.3 0 .6 0 .9.7.3.8 1 2.6 1.1 2.8.1.2.2.5 0 .8-.6 1.2-1.3 1.2-1 1.8.9 2 2.3 3.5 4.1 4.4.3.2.5.1.7-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.2 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.9z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a class="btn btn-call outline" href="tel:+919767162445">Call 97671 62445</a>
+        </div>
+        <p class="trustline"><svg class="motif" style="width:18px;height:18px" viewBox="0 0 64 64"><use href="#marigold"/></svg> Run by Siddheshwar Wagh · serving Alandi Devachi &amp; nearby Pune</p>
+      </div>
+      <div class="hero-art">
+        <svg class="garland" viewBox="0 0 320 220">
+          <path d="M10 30 Q160 120 310 30" stroke="var(--border)" stroke-width="2" fill="none"/>
+          <g>
+            <use href="#marigold" x="8" y="16" width="46" height="46"/>
+            <use href="#marigold" x="78" y="70" width="46" height="46"/>
+            <use href="#marigold" x="148" y="94" width="46" height="46"/>
+            <use href="#marigold" x="216" y="70" width="46" height="46"/>
+            <use href="#marigold" x="278" y="16" width="46" height="46"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="wrap">
+      <div><b>2+ yrs</b><span>Decorating events in Pune</span></div>
+      <div><b>14</b><span>Services under one roof</span></div>
+      <div><b>1</b><span>Fixed local team, no middlemen</span></div>
+      <div><b>100%</b><span>Décor customised to your event</span></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="services-head">
+        <svg class="motif big" viewBox="0 0 64 64" style="margin-bottom:10px"><use href="#paisley"/></svg>
+        <h2>Services, for every kind of celebration</h2>
+        <p style="margin:0 auto">From an intimate haldi at home to a full wedding car and grand entry — pick what your event needs.</p>
+      </div>
+
+      <div class="bento">
+        <div class="card wide">
+          <p class="tag">Weddings &amp; Rituals</p>
+          <h3>Wedding &amp; Haldi-Mehendi Décor</h3>
+          <ul>
+            <li>Wedding stage &amp; mandap decoration</li>
+            <li>Haldi / Mehendi setup with floral seating</li>
+            <li>Wedding car decoration</li>
+            <li>Grand entry setups for the couple</li>
+          </ul>
+          <a class="ask" href="https://wa.me/919767162445?text=Hi%2C%20I%27m%20planning%20a%20wedding%2Fhaldi-mehendi%20function.%20Can%20you%20share%20décor%20options%20%26%20pricing%3F">Ask about wedding packages →</a>
+        </div>
+        <div class="card">
+          <p class="tag">Celebrations</p>
+          <h3>Birthday Decoration</h3>
+          <ul>
+            <li>Theme balloon setups</li>
+            <li>Backdrop &amp; entry décor</li>
+          </ul>
+          <a class="ask" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Birthday%20Decoration.">Get a quote →</a>
+        </div>
+        <div class="card">
+          <p class="tag">Celebrations</p>
+          <h3>Anniversary &amp; Engagement</h3>
+          <ul>
+            <li>Ring ceremony stage décor</li>
+            <li>Anniversary candlelight setups</li>
+          </ul>
+          <a class="ask" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Anniversary%2FEngagement%20Decoration.">Get a quote →</a>
+        </div>
+        <div class="card">
+          <p class="tag">Family Moments</p>
+          <h3>Baby Shower Decoration</h3>
+          <ul>
+            <li>Pastel balloon &amp; floral themes</li>
+            <li>Photo props &amp; backdrop</li>
+          </ul>
+          <a class="ask" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Baby%20Shower%20Decoration.">Get a quote →</a>
+        </div>
+        <div class="card">
+          <p class="tag">Business Events</p>
+          <h3>Corporate Event Decoration</h3>
+          <ul>
+            <li>Launches, felicitations &amp; office parties</li>
+            <li>Branded stage &amp; entrance décor</li>
+          </ul>
+          <a class="ask" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Corporate%20Event%20Decoration.">Get a quote →</a>
+        </div>
+        <div class="card wide">
+          <p class="tag">Effects &amp; Extras</p>
+          <h3>Balloon, Flower &amp; Special Effects</h3>
+          <div class="chips">
+            <span class="chip">Balloon Decoration</span>
+            <span class="chip">Fresh Flower Decoration</span>
+            <span class="chip">Cold Fire Entry</span>
+            <span class="chip">Paper Blast</span>
+            <span class="chip">Photography Services</span>
+          </div>
+          <a class="ask" style="margin-top:14px" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20cold%20fire%2C%20paper%20blast%20or%20photography%20add-ons.">Ask about add-ons →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2>Why families &amp; offices choose us</h2>
+        <p>Creative Event And Decoration is run personally by Siddheshwar Wagh out of Alandi Devachi — every booking is handled directly by the person doing your décor, not a call-centre.</p>
+        <div class="why-list">
+          <div class="why-item"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Best quality materials</b><br>Fresh flowers, sturdy balloon setups &amp; clean finishing.</div></div>
+          <div class="why-item"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Reasonable, transparent pricing</b><br>No hidden charges — quoted clearly on WhatsApp before you confirm.</div></div>
+          <div class="why-item"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Customer delight, every time</b><br>We set up early and stay till the event looks exactly right.</div></div>
+        </div>
+      </div>
+      <div id="gallery">
+        <h3>What we're usually asked to set up</h3>
+        <p>A quick look at the moments we decorate for most often in and around Alandi Devachi.</p>
+        <div class="chips">
+          <span class="chip">Birthday balloon themes</span>
+          <span class="chip">Wedding mandap &amp; stage</span>
+          <span class="chip">Haldi floral seating</span>
+          <span class="chip">Baby shower backdrops</span>
+          <span class="chip">Grand entry &amp; cold fire</span>
+          <span class="chip">Corporate stage branding</span>
+        </div>
+        <p style="margin-top:18px">See more setups on Instagram <a href="https://instagram.com/Creative_Event_2005" target="_blank" rel="noopener" style="color:var(--accent-deep);font-weight:700">@Creative_Event_2005</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="divider"><span class="line"></span><svg class="motif" viewBox="0 0 64 64"><use href="#paisley"/></svg><span class="line"></span></div>
+      <div class="services-head">
+        <h2>Book your date</h2>
+        <p style="margin:0 auto">Tell us your event date and what you need — we'll reply on WhatsApp with options and pricing.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="info-card">
+          <div class="info-row"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Address</b><br>Alandi Devachi, Pune, Maharashtra 412105</div></div>
+          <div class="info-row"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Availability</b><br>Available for events &amp; bookings — call ahead to confirm your date</div></div>
+          <div class="info-row"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Phone / WhatsApp</b><br>+91 97671 62445</div></div>
+          <div class="info-row"><svg class="motif" viewBox="0 0 64 64"><use href="#marigold"/></svg><div><b>Email</b><br>creativeevent5505@gmail.com</div></div>
+          <div class="contact-ctas">
+            <a class="btn btn-wa" href="https://wa.me/919767162445?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation%20for%20my%20event.">
+              <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3 9 3 16c0 2.6.8 5 2.1 7L3 29l6.2-2c2 1.1 4.3 1.7 6.8 1.7 7 0 13-6 13-13S23 3 16 3zm7.5 18.4c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.5.2-2.4-.1-.6-.2-1.3-.4-2.2-.8-3.9-1.7-6.4-5.6-6.6-5.9-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.4-.4.8-.5 1.1-.5h.8c.3 0 .6 0 .9.7.3.8 1 2.6 1.1 2.8.1.2.2.5 0 .8-.6 1.2-1.3 1.2-1 1.8.9 2 2.3 3.5 4.1 4.4.3.2.5.1.7-.1.3-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.2 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.9z"/></svg>
+              WhatsApp Us
+            </a>
+            <a class="btn btn-call outline" href="tel:+919767162445">Call Now</a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://maps.google.com/maps?q=Alandi%20Devachi%2C%20Pune%2C%20Maharashtra%2C%20412105&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location of Creative Event And Decoration"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:8px;font-family:'Yatra One',cursive;font-size:1.15rem;color:var(--soft)">
+      <svg class="motif" style="width:24px;height:24px" viewBox="0 0 64 64"><use href="#marigold"/></svg>
+      Creative Event And Decoration
+    </div>
+    <div>Alandi Devachi, Pune, Maharashtra 412105 · <a href="tel:+919767162445">97671 62445</a> · <a href="mailto:creativeevent5505@gmail.com">creativeevent5505@gmail.com</a></div>
+    <div>Instagram: <a href="https://instagram.com/Creative_Event_2005" target="_blank" rel="noopener">@Creative_Event_2005</a></div>
+  </div>
+</footer>
+
+<div id="stickybar">
+  <a class="btn btn-call" href="tel:+919767162445">Call</a>
+  <a class="btn btn-wa" href="https://wa.me/919767162445?text=Hi%21%20I%27d%20like%20to%20enquire%20about%20event%20decoration%20for%20my%20event.">WhatsApp</a>
+</div>
+
+</body>
+</html>
